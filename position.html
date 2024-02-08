@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+            .container{
+                margin-top: 10px;
+            }
+            .box1{
+                width: 150px;
+                height: 150px;
+                border: 2px solid orange;
+                background-color: cadetblue;
+                display: inline-block;
+                position: relative;
+                z-index: 2;
+            }
+            .box2{
+                width: 150px;
+                height: 150px;
+                border: 2px solid red;
+                background-color: rgb(191, 49, 167);
+                display: inline-block;
+                
+                /* position: static;  By default */
+                /* position: relative; */
+                position: absolute;
+                top: 100px;
+                left: 50px;
+                z-index: 1;
+            }
+    .box3{
+                width: 150px;
+                height: 150px;
+                border: 2px solid black;
+                background-color: greenyellow;
+                display: inline-block;
+                position: relative;
+                z-index: 3;
+            }
+            .whats-app{
+                right: 50px;
+                bottom: 50px;
+                position: fixed;
+            }
+        </style>
+</head>
+<body>
+    <div class="container">
+       
+        <div class="box1"> Box 1</div>
+        <div class="box2">Box 2</div>
+        <div class="box3">Box 3</div>
+       
+    </div>
+</body>
+</html>

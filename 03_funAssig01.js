@@ -7,7 +7,7 @@ function myName(){
 myName()
 
 function hobby() {
-    console.log('My hobbies age reading,cooking');
+    console.log('My hobbies are reading,cooking');
     
 }
 hobby()
