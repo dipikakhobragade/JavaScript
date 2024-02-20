@@ -137,3 +137,103 @@ console.log(`---------in operator----`);
 
 const isAgeAvailable = 'age' in developer;
 console.log(isAgeAvailable);
+
+console.log(`================practice============`);
+
+let employee = {
+    fullName:'Dipika Khobragade',
+    age: 37,
+    exp : '3 yrs',
+    designation: ' Angular Developer'
+}
+console.log(employee);
+console.log(employee.fullName);
+console.log(employee['fullName']);
+employee.city='Pune';
+console.table(employee);
+
+delete employee.age
+console.table(employee);
+
+employee.exp= '5 yrs'
+console.table(employee);
+
+let fun = {
+
+    funName : 'anonymous',
+    city : 'Mumbai',
+    address:{
+        country: 'India',
+        street:'Palava',
+        pin : 1234,
+        getAddress:function(){
+            console.log(`${this.pin}, 
+            ${this.street},
+            ${this.country}`);
+        }
+    },
+    show: function(){
+        console.log(`Inside function`);
+
+    }
+}
+
+fun.show();
+console.log(fun.address.pin);
+
+fun.address.flatNo = 567;
+console.log(fun.address);
+
+fun.address.getAddress();
+
+
+let dev = {
+    fName : 'dipika',
+    city: 'nagpur',
+    country : 'India',
+    skill : ['HTML','CSS','Javascript']
+}
+
+for (const key in dev) {
+    if (Object.hasOwnProperty.call(dev, key)) {
+        const element = dev[key];
+        console.log(`${key}, ${element}`);
+    }
+}
+
+dev.skill.push('Angular'); 
+console.log(dev.skill);
+dev.skill.shift();
+console.log(dev.skill);
+
+const key1 =Object.keys(dev);
+console.log(key1);
+
+const val = Object.values(dev);
+console.log(val);
+
+console.log(Array.isArray(val));//is value array or not
+
+for (const element of val) {
+
+    console.log(element);
+    
+}
+
+
+const entries1= Object.entries(dev)
+console.log(entries1);
+
+const en = entries[1];
+console.log(en);
+
+ for (const element of entries1) {
+    console.log(element);
+    
+ }
+
+console.log(entries1[0][0]);
+console.log(entries1[0][1]);
+
+const isAvailable = 'fName' in dev;
+console.log(isAvailable);

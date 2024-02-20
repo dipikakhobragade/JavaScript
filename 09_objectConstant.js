@@ -34,7 +34,7 @@ Object.freeze(array);
 array[1] = 56;
 console.log(array);
 
-const developer = {
+const developer1 = {
 
     firstName: "Gajanan",
 
@@ -46,13 +46,13 @@ const developer = {
 
  
 
-const newDeveloper = Object.assign({}, developer)
+const newDeveloper = Object.assign({}, developer1)
 
 newDeveloper.firstName = "Jenny";
 
 console.log(newDeveloper);
 
-console.log(developer);
+console.log(developer1);
 
  
 
@@ -85,3 +85,34 @@ console.log(user);
 console.log(address);
 
 console.log(mergeObj);
+
+console.log(`----------------practice ---------------`);
+
+const dev = {
+
+    firstName : 'Ridvika',
+    age: 37,
+    isMarried: true
+}
+
+dev.age=56;
+console.log(dev);
+
+// dev ={  not allowed
+
+// }
+
+Object.freeze(dev);
+dev.isMarried = false;
+console.log(dev);
+
+
+const arr =[ 1,2,3,4,5];
+arr[0] = 100;
+console.log(arr);
+//arr = [55,88,99]---not allowed
+Object.freeze(arr);
+arr[1]= 44
+console.log(arr);
+
+
